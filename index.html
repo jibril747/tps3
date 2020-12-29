@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login User</title>
+</head>
+<body>
+	<h2 align="center">Login Data SIP dan STR</h2>
+	<br/>
+	<!-- cek pesan notifikasi -->
+	<?php 
+	if(isset($_GET['pesan'])){
+		if($_GET['pesan'] == "gagal"){
+			echo "Login gagal! username dan password salah!";
+		}else if($_GET['pesan'] == "logout"){
+			echo "Anda telah berhasil logout";
+		}else if($_GET['pesan'] == "belum_login"){
+			echo "Anda harus login untuk mengakses halaman admin";
+		}
+	}
+	?>
+	<br/>
+	<br/>
+	<form name="form1" method="post" action="cek_login.php">
+<table width="248" height="133" border="0" align="center">
+<tr>
+                <td width="219"><div align="center" class="style6">
+                  <p>Isikan Username dengan NIP anda.</p>
+                  <table width="200" border="0" align="center" cellspacing="5">
+                    <tr>
+                      <td>Username</td>
+                      <td>:</td>
+                      <td><label for="textfield2"></label>
+                        <input type="text" name="username" id="textfield2" /></td>
+                    </tr>
+                    <tr>
+                      <td>Password</td>
+                      <td>:</td>
+                      <td><label for="textfield3"></label>
+                        <input type="password" name="password" id="textfield3" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td><input type="submit" name="button" value="Login" /></td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;</p>
+                </div>
+<p>&nbsp;</p></td>
+              </tr>
+            </table>
+
+</form>
+</body>
+</html>
